@@ -1,3 +1,42 @@
+# React Refactor
+
+This exercise is to evaluate your understanding of React and some other front end principles. 
+
+Currently, this app has a button that can be clicked and that makes an API call to a public API endpoint that requires no authentication. Refactor this application to meet at least the requirements specified below. There is no one answer to this problem - it's just to evaluate how you view problems and your approach to resolving them. 
+
+## Requirements
+
+1. Make the API call once, at page load.
+2. Display both the year and the population during that year from the above API call.
+3. Remove the button.
+4. Include some kind of page title explaining what the page does
+
+## Stretch Goals
+
+1. Sort the list by the largest population
+2. Include a dropdown that would allow you to sort either by population or year and then make sure the data responds accordingly
+3. Write a custom React hook that uses more than one React hook
+
+## Things to Think About
+
+- There's no use of React hooks in the App.js file. Do you see opportunities to utilize React hooks anywhere? Which ones? Why?
+- There shouldn't be any reason to modify the API call, but you could play with it to see if you get different results.
+- What if we had to make many lists to display like this? How would you go about specifying which parts of this application could be reusable?
+- Styling, even if a little bit, is very important. Make sure to take this into consideration when designing how your output looks
+- There is no wrong way to do this exercise! I'm happy to review it with anyone who would want to take a look at this
+- Don't spend more than an hour or so on this - it's supposed to be fun
+- If you're going to use git for version control - decide on what you are going to fix, make a branch, do your work and make a tiny commit. Many small commits can make it easier to read than one large commit that fixes everything.
+
+## To Submit
+
+Either:
+- Fork this repo and send me a link to your fork/branch on Github
+- Zip up this codebase in it's entirety and send it to: mark.pernotto@cohortscience.com
+
+
+If you are unfamiliar with running a CRA, refer to the below. Please let me know if you have any questions.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -27,6 +27,10 @@ Currently, this app has a button that can be clicked and that makes an API call 
 - Don't spend more than an hour or so on this - it's supposed to be fun
 - If you're going to use git for version control - decide on what you are going to fix, make a branch, do your work and make a tiny commit. Many small commits can make it easier to read than one large commit that fixes everything.
 
+## Example Screenshot of styled example
+
+![image](https://github.com/mark-pernotto-cohort-science/react-test/blob/main/public/potentialImage.png)
+
 ## To Submit
 
 Either:

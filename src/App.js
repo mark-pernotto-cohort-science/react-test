@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
+  let data = [];
+
+  const getPopulationData = () => {
+    fetch(
+      "https://datausa.io/api/data?drilldowns=Nation&measures=Population",
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        data = result.data;
+        updateDOM();
+      });
+  };
+
+  const updateDOM = () => {
+    const dataContainer = document.getElementById(
+      "data-container",
+    );
+    if (data.length > 0) {
+      dataContainer.innerHTML = `
+        <div>
+          ${data.map((item) => {
+            return item.Population;
+          })}
+        </div>
+      `;
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="data-container"></div>
+      <button onClick={getPopulationData}>
+        Get Population Data
+      </button>
     </div>
   );
 }
